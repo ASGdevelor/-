@@ -248,18 +248,18 @@ section {
 }
 
 .button-section {
-    border-color: $colorActive;
-
+    background-color:transparent;
+    padding: 5px 37px 15px 37px;
+    border: 1px solid $colorActive;
     &__text {
         font-family: $FontsPrimary;
-        padding: 5px 37px 15px 37px;
-        border: 1px solid $colorActive;
         text-align: center;
+        color: $colorPrimary;
     }
 
-    :hover {
+    &:hover {
         background-color: $colorActive;
-        transition: 1s;
+        transition: 2s;
         color: $backgroundColor;
     }
 }
