@@ -221,17 +221,18 @@ section {
 }
 
 .button-section {
-  border-color: #8DFD1B;
+  background-color: transparent;
+  padding: 5px 37px 15px 37px;
+  border: 1px solid #8DFD1B;
 }
 .button-section__text {
   font-family: "DM Mono", monospace;
-  padding: 5px 37px 15px 37px;
-  border: 1px solid #8DFD1B;
   text-align: center;
+  color: #FFFFFF;
 }
-.button-section :hover {
+.button-section:hover {
   background-color: #8DFD1B;
-  transition: 1s;
+  transition: 2s;
   color: #000000;
 }
 
