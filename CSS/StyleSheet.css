@@ -135,7 +135,7 @@ section {
 
 .button {
   background-color: #8DFD1B;
-  padding: 10px 60px 30px 60px;
+  padding: 14px 64px 30px 60px;
   border: none;
 }
 .button_text {
@@ -198,7 +198,7 @@ section {
   text-align: left;
 }
 .text_margin-b {
-  margin-bottom: 44px;
+  margin-bottom: 40px;
 }
 .text_fs {
   font-size: 15px;
@@ -222,7 +222,7 @@ section {
 
 .button-section {
   background-color: transparent;
-  padding: 5px 37px 15px 37px;
+  padding: 5px 50px 15px 55px;
   border: 1px solid #8DFD1B;
 }
 .button-section__text {
@@ -241,6 +241,7 @@ section {
   font-family: "Audiowide", sans-serif;
   font-size: 79px;
   line-height: 88px;
+  font-weight: 100;
   letter-spacing: 0%;
   text-align: left;
   text-transform: uppercase;
@@ -357,6 +358,24 @@ section {
        column-gap: 200px;
 }
 
+.marquee {
+  display: flex;
+  justify-content: space-between;
+  gap: 200px;
+  -moz-column-gap: 200px;
+       column-gap: 200px;
+  animation: marquee 10s linear infinite;
+  width: 100%;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .overlay-image {
   position: absolute;
   z-index: -99;
@@ -1109,6 +1128,7 @@ section {
   }
   .burger-menu .nav__iten {
     display: block;
+    margin-bottom: 10px;
   }
   .burger-container {
     display: block;

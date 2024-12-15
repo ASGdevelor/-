@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -63,21 +62,46 @@ section {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   position: absolute;
-  top: 50px; /* Положение меню относительно бургер-блока */
+  top: 50px;
   right: 0;
-  background-color: #000000; /* Цвет фона меню */
-  width: 50%; /* Ширина меню */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для меню */
-  padding: 10px; /* Внутренние отступы */
-  z-index: 1000; /* Уровень слоя */
+  background-color: #000000;
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
 }
 
 .nav.active {
   display: block;
 }
 
-.buger-block {
+.burger-menu {
   display: none;
+  cursor: pointer;
+}
+.burger-menu .nav-flex {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.burger-menu .nav {
+  display: block;
+}
+.burger-menu .nav__iten {
+  display: block;
+}
+
+.burger-menu.active {
+  display: block;
+  position: fixed;
+  top: 50px;
+  right: 10px;
+  background-color: rgba(66, 0, 107, 0.5);
+  width: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  z-index: 10000;
+  height: 50%;
 }
 
 .nav {
@@ -154,9 +178,17 @@ section {
   letter-spacing: 0%;
 }
 
+.nav__iten {
+  margin-bottom: 10px;
+}
+.nav__iten-link {
+  color: #FFFFFF;
+}
+
 .button {
   background-color: #8DFD1B;
   padding: 21px 60px 24px 60px;
+  border: none;
 }
 .button_text {
   color: #000000;
@@ -210,6 +242,9 @@ section {
   }
 }
 @media (max-width: 992px) {
+  .icon-container {
+    display: none;
+  }
   .Left-block__Title {
     font-size: 40px;
   }
@@ -240,10 +275,17 @@ section {
     flex-direction: column;
     row-gap: 30px;
   }
-}
-@media (max-width: 768px) {
-  .icon-container {
-    display: none;
+  .burger-menu.active {
+    display: block;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background-color: rgba(66, 0, 107, 0.5);
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    z-index: 10000;
+    height: 50%;
   }
   .buger-block {
     display: block;
@@ -261,9 +303,31 @@ section {
     background-color: #FFFFFF;
     border-radius: 5px;
   }
+  .burger-container {
+    display: block;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: #FFFFFF;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
 }
 @media (max-width: 576px) {
   .header-flex {
     padding: 10px 2vw 10px 2vw;
+  }
+  .burger-menu.active {
+    width: 80%;
+    height: 60%;
   }
 }/*# sourceMappingURL=error404.css.map */
